@@ -15,7 +15,7 @@ The returned table must be ordered in ascending order based on employee IDs (id)
 SELECT
       id,
       firstname,
-      lastname,
+      lastname
     CASE 
         WHEN years_in_company > 5                 THEN years_in_company * 5000
         WHEN years_in_company BETWEEN 3 AND 5     THEN years_in_company * 3000
