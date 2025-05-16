@@ -36,25 +36,22 @@ SELECT
 	project_type, 
 	payment, 
 	status
-FROM 
-	projects p1
+FROM projects p1
 WHERE 
 	payment = (
-    SELECT 
-	MAX(p2.payment)
-    FROM 
-	projects p2
-    WHERE 
-	p2.business_id = p1.business_id
+	    SELECT 
+		MAX(p2.payment)
+	    FROM projects p2
+	    WHERE 
+		p2.business_id = p1.business_id
 		)
 AND 
-	business_id IN (
-    SELECT 
-	id
-    FROM 
-	businesses
-    WHERE 
-	industry_type = 'Information Technology'
+    	business_id IN (
+	    SELECT 
+		id
+	    FROM businesses
+	    WHERE 
+		industry_type = 'Information Technology'
 			)
  ORDER BY 
 	business_id ASC;
