@@ -31,14 +31,14 @@ INSERT INTO
             ,depends_on_project_id
             ,priority
              )
-    VALUES (
+     VALUES  (
         2
         ,'Software'
         ,150000
         ,'WAITING'
         ,NULL
         ,'LOW'
-            );
+             );
 
 -- second query
 UPDATE projects 
