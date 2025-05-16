@@ -24,20 +24,20 @@ The returned results should also be ordered by the id column in ascending order.
 -- first query
 INSERT INTO 
     projects (
-            business_id
-            ,project_type
-            ,payment
-            ,status
-            ,depends_on_project_id
-            ,priority
+            business_id,
+            project_type,
+            payment,
+            status,
+            depends_on_project_id,
+            priority
              )
      VALUES  (
-        2
-        ,'Software'
-        ,150000
-        ,'WAITING'
-        ,NULL
-        ,'LOW'
+        2,
+        'Software',
+        150000,
+        'WAITING',
+        NULL,
+        'LOW'
              );
 
 -- second query
@@ -49,12 +49,12 @@ WHERE
 
 -- third query
 SELECT 
-    id
-    ,business_id
-    ,project_type
-    ,payment
-    ,status
-    ,COALESCE(depends_on_project_id, 'N/A') AS depends_on_project_id, 
+    id,
+    business_id,
+    project_type,
+    payment,
+    status,
+    COALESCE(depends_on_project_id, 'N/A') AS depends_on_project_id, 
     priority
 FROM projects
 ORDER BY id ASC;
