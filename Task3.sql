@@ -33,10 +33,10 @@ table under the current_project_id column). The returned table should be ordered
 
 --first query
 SELECT 
-    p.id AS project_id,
+    p.id                 AS project_id,
     p.project_type,
     p.priority,
-    e.id AS employee_id,
+    e.id                 AS employee_id,
     e.firstname,
     e.lastname
 FROM 
@@ -58,7 +58,7 @@ ORDER BY
 --second query
 SELECT 
     p.business_id,
-    p.id AS project_id,
+    p.id                 AS project_id,
     e.email,
     e.firstname,
     e.lastname
