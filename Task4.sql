@@ -9,8 +9,8 @@ SET
 WHERE 
 	status IS NULL;
 
-SELECT * FROM 
-	projects 
+SELECT * 
+FROM projects 
 WHERE 
 	status = 'WAITING' 
 ORDER BY 
